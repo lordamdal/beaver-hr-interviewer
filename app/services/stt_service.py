@@ -1,11 +1,10 @@
 # app/services/stt_service.py
 
-import os
-from google.cloud import speech_v1
-from google.cloud.speech_v1 import SpeechClient
-from google.cloud import storage
+# app/services/stt_service.py
+
+from typing import Dict, List, Optional, Tuple, Union, AsyncGenerator
 import logging
-from typing import Optional, Dict, List, Tuple
+from datetime import datetime
 import wave
 import io
 import asyncio
@@ -16,6 +15,10 @@ import soundfile as sf
 import numpy as np
 from pydub import AudioSegment
 import json
+from google.cloud import speech_v1
+from google.cloud.speech_v1 import SpeechClient
+from google.cloud import storage
+
 
 logger = logging.getLogger(__name__)
 

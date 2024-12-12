@@ -9,6 +9,8 @@ from vertexai.language_models import TextGenerationModel
 from app.config.settings import settings
 import time
 import re
+from google.oauth2 import service_account
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -34,8 +36,9 @@ class LLMService:
     def __init__(self):
         """Initialize the LLM service with Vertex AI"""
         try:
-            vertexai.init(project=settings.GOOGLE_CLOUD_PROJECT)
-            self.model = TextGenerationModel.from_pretrained("mistral-7b")
+            self._setup_google_auth()
+            self.model = None
+            self._initialize_model()
             self.max_retries = 3
             self.retry_delay = 2  # seconds
             
@@ -43,6 +46,44 @@ class LLMService:
             self.load_interview_templates()
         except Exception as e:
             logger.error(f"Failed to initialize LLM service: {str(e)}")
+            raise
+
+    def _setup_google_auth(self):
+        """Set up Google Cloud authentication"""
+        try:
+            credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+            
+            if not credentials_path or not os.path.exists(credentials_path):
+                raise ValueError(
+                    "GOOGLE_APPLICATION_CREDENTIALS environment variable not set "
+                    "or file does not exist"
+                )
+
+            credentials = service_account.Credentials.from_service_account_file(
+                credentials_path,
+                scopes=['https://www.googleapis.com/auth/cloud-platform']
+            )
+
+            # Initialize Vertex AI with project and credentials
+            vertexai.init(
+                project=settings.GOOGLE_CLOUD_PROJECT,
+                credentials=credentials
+            )
+            
+            logger.info("Google Cloud authentication successful")
+            
+        except Exception as e:
+            logger.error(f"Google Cloud authentication failed: {str(e)}")
+            raise
+
+    def _initialize_model(self):
+        """Initialize the Vertex AI model"""
+        try:
+            if not self.model:
+                self.model = TextGenerationModel.from_pretrained("mistral-7b")
+                logger.info("Vertex AI model initialized successfully")
+        except Exception as e:
+            logger.error(f"Failed to initialize Vertex AI model: {str(e)}")
             raise
 
     def load_interview_templates(self):
@@ -108,6 +149,9 @@ class LLMService:
                               user_input: str) -> Dict:
         """Generate interviewer response based on context and user input"""
         try:
+            if not self.model:
+                raise ValueError("Model not initialized")
+
             system_prompt = self._create_system_prompt(context)
             
             # Prepare conversation history
@@ -196,6 +240,9 @@ class LLMService:
     def generate_final_report(self, context: InterviewContext) -> Dict:
         """Generate final interview report"""
         try:
+            if not self.model:
+                raise ValueError("Model not initialized")
+
             report_prompt = f"""
             Generate a comprehensive interview report based on the following information:
             
@@ -243,6 +290,10 @@ class LLMService:
         # Simple question extraction using regex
         questions = re.findall(r'[^.!?]*\?', text)
         return [q.strip() for q in questions if len(q.strip()) > 10]
+
+    def is_available(self) -> bool:
+        """Check if the LLM service is available"""
+        return self.model is not None
 
 # Usage example
 if __name__ == "__main__":

@@ -1,0 +1,24 @@
+<!-- app/templates/email/payment_failed.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Payment Failed - Action Required</h2>
+
+<p>Hello {{ user_name }},</p>
+
+<p>We were unable to process your payment for your subscription. To prevent any interruption in your service, please update your payment information.</p>
+
+<div class="info-box">
+    <h3>Payment Details</h3>
+    <ul>
+        <li>Amount: ${{ amount }}</li>
+        <li>Next Attempt: {{ next_attempt }}</li>
+    </ul>
+</div>
+
+<a href="{{ update_payment_url }}" class="button">Update Payment Method</a>
+
+<p>If you need assistance, please contact our support team.</p>
+
+<p>Best regards,<br>The {{ company_name }} Team</p>
+{% endblock %}

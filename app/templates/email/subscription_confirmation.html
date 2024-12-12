@@ -1,0 +1,32 @@
+<!-- app/templates/email/subscription_confirmation.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Subscription Confirmed!</h2>
+
+<p>Hello {{ user_name }},</p>
+
+<p>Thank you for subscribing to our {{ plan_name }} plan. Your subscription has been successfully activated.</p>
+
+<div class="info-box">
+    <h3>Subscription Details</h3>
+    <ul>
+        <li>Plan: {{ plan_name }}</li>
+        <li>Amount: ${{ amount }}/month</li>
+        <li>Next Billing Date: {{ next_billing_date }}</li>
+    </ul>
+</div>
+
+<h3>Your Premium Features</h3>
+<ul>
+    {% for feature in features %}
+    <li>{{ feature }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ manage_url }}" class="button">Manage Subscription</a>
+
+<p>If you have any questions about your subscription, please don't hesitate to contact our support team.</p>
+
+<p>Best regards,<br>The {{ company_name }} Team</p>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!-- app/templates/email/interview_reminder.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Interview Reminder</h2>
+
+<p>Hello {{ user_name }},</p>
+
+<p>This is a reminder that your practice interview is scheduled for:</p>
+
+<div class="info-box">
+    <h3>Interview Details</h3>
+    <ul>
+        <li>Date: {{ interview_time.strftime('%B %d, %Y') }}</li>
+        <li>Time: {{ interview_time.strftime('%I:%M %p') }}</li>
+        <li>Company: {{ company_name }}</li>
+    </ul>
+</div>
+
+<h3>Preparation Tips</h3>
+<ul>
+    {% for tip in preparation_tips %}
+    <li>{{ tip }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ interview_url }}" class="button">Join Interview</a>
+
+<p>Good luck with your interview!</p>
+
+<p>Best regards,<br>The {{ company_name }} Team</p>
+{% endblock %}

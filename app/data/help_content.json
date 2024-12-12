@@ -1,0 +1,227 @@
+{
+    "common_issues": [
+        {
+            "id": "ci001",
+            "title": "Audio Not Working During Interview",
+            "solution": "1. Check your microphone permissions in browser settings\n2. Ensure your microphone is properly connected\n3. Test your microphone in browser settings\n4. Try refreshing the page\n5. Clear browser cache and cookies",
+            "video_url": "https://example.com/tutorials/audio-troubleshooting"
+        },
+        {
+            "id": "ci002",
+            "title": "Interview Session Disconnected",
+            "solution": "1. Check your internet connection\n2. Close other bandwidth-heavy applications\n3. Try using a different browser\n4. Clear browser cache\n5. Contact support if issue persists",
+            "related_articles": ["ti001", "ti002"]
+        },
+        {
+            "id": "ci003",
+            "title": "Payment Failed",
+            "solution": "1. Verify your card details\n2. Ensure sufficient funds\n3. Check if card is expired\n4. Contact your bank\n5. Try a different payment method",
+            "related_articles": ["bp001"]
+        }
+    ],
+    "quick_tips": [
+        {
+            "id": "qt001",
+            "title": "Prepare Your Space",
+            "description": "Find a quiet room with good lighting and minimal background noise for the best interview experience."
+        },
+        {
+            "id": "qt002",
+            "title": "Test Your Equipment",
+            "description": "Always test your microphone and speakers before starting an interview session."
+        },
+        {
+            "id": "qt003",
+            "title": "Review Your Resume",
+            "description": "Keep your resume handy and review it before the interview for better context-aware responses."
+        }
+    ],
+    "faq": {
+        "getting_started": [
+            {
+                "id": "gs001",
+                "question": "How do I start my first interview?",
+                "answer": "1. Upload your resume\n2. Select your target position\n3. Choose interview type\n4. Configure preferences\n5. Click 'Start Interview'",
+                "related_links": [
+                    {
+                        "title": "Video Tutorial",
+                        "url": "/tutorials/first-interview"
+                    }
+                ]
+            },
+            {
+                "id": "gs002",
+                "question": "What subscription plans are available?",
+                "answer": "We offer three plans:\n- Free: 1 interview/month\n- Basic: 5 interviews/month\n- Premium: Unlimited interviews",
+                "related_links": [
+                    {
+                        "title": "Pricing Details",
+                        "url": "/pricing"
+                    }
+                ]
+            }
+        ],
+        "technical_support": [
+            {
+                "id": "ts001",
+                "question": "What are the system requirements?",
+                "answer": "- Modern web browser (Chrome, Firefox, Safari)\n- Stable internet connection\n- Microphone access\n- Minimum 2MB/s internet speed",
+                "related_links": [
+                    {
+                        "title": "System Check Tool",
+                        "url": "/system-check"
+                    }
+                ]
+            },
+            {
+                "id": "ts002",
+                "question": "How do I update my browser settings?",
+                "answer": "1. Open browser settings\n2. Go to Privacy & Security\n3. Allow microphone access\n4. Enable cookies for our domain",
+                "video_url": "https://example.com/tutorials/browser-settings"
+            }
+        ],
+        "billing": [
+            {
+                "id": "bp001",
+                "question": "How do I update my payment method?",
+                "answer": "1. Go to Account Settings\n2. Select 'Billing'\n3. Click 'Update Payment Method'\n4. Enter new card details\n5. Save changes",
+                "related_links": [
+                    {
+                        "title": "Billing FAQ",
+                        "url": "/billing-faq"
+                    }
+                ]
+            }
+        ]
+    },
+    "tutorials": {
+        "interview_preparation": [
+            {
+                "id": "ip001",
+                "title": "Preparing for Your First AI Interview",
+                "description": "Learn how to prepare for and make the most of your AI interview session.",
+                "duration": "5 minutes",
+                "video_url": "https://example.com/tutorials/first-interview",
+                "steps": [
+                    "Set up your environment",
+                    "Review your resume",
+                    "Test your equipment",
+                    "Understand the interview format",
+                    "Practice common questions"
+                ]
+            },
+            {
+                "id": "ip002",
+                "title": "Advanced Interview Techniques",
+                "description": "Master advanced techniques for better interview performance.",
+                "duration": "10 minutes",
+                "video_url": "https://example.com/tutorials/advanced-techniques",
+                "steps": [
+                    "Structure your responses",
+                    "Use the STAR method",
+                    "Handle technical questions",
+                    "Ask intelligent questions",
+                    "Follow up effectively"
+                ]
+            }
+        ],
+        "platform_features": [
+            {
+                "id": "pf001",
+                "title": "Using the Analytics Dashboard",
+                "description": "Learn how to interpret and use your performance analytics.",
+                "duration": "7 minutes",
+                "video_url": "https://example.com/tutorials/analytics",
+                "steps": [
+                    "Access your dashboard",
+                    "Understand key metrics",
+                    "Track progress over time",
+                    "Identify improvement areas",
+                    "Set performance goals"
+                ]
+            }
+        ]
+    },
+    "support_categories": {
+        "technical": {
+            "name": "Technical Support",
+            "description": "Get help with technical issues and system requirements.",
+            "priority_level": "high",
+            "response_time": "24 hours"
+        },
+        "account": {
+            "name": "Account Management",
+            "description": "Manage your account settings and preferences.",
+            "priority_level": "medium",
+            "response_time": "48 hours"
+        },
+        "billing": {
+            "name": "Billing & Subscription",
+            "description": "Handle payment and subscription related queries.",
+            "priority_level": "high",
+            "response_time": "24 hours"
+        }
+    },
+    "video_tutorials": {
+        "beginner": [
+            {
+                "id": "vt001",
+                "title": "Getting Started Guide",
+                "url": "https://example.com/tutorials/getting-started",
+                "duration": "5:00",
+                "topics": [
+                    "Account setup",
+                    "Basic navigation",
+                    "First interview"
+                ]
+            }
+        ],
+        "advanced": [
+            {
+                "id": "vt002",
+                "title": "Advanced Features",
+                "url": "https://example.com/tutorials/advanced-features",
+                "duration": "10:00",
+                "topics": [
+                    "Custom scenarios",
+                    "Performance analytics",
+                    "Interview strategies"
+                ]
+            }
+        ]
+    },
+    "troubleshooting": {
+        "audio": {
+            "id": "ts001",
+            "title": "Audio Issues",
+            "steps": [
+                "Check microphone connection",
+                "Verify browser permissions",
+                "Test audio settings",
+                "Update browser",
+                "Clear cache"
+            ],
+            "common_solutions": {
+                "no_sound": "Check system volume and browser permissions",
+                "echo": "Use headphones or reduce speaker volume",
+                "background_noise": "Find a quieter environment"
+            }
+        },
+        "connection": {
+            "id": "ts002",
+            "title": "Connection Issues",
+            "steps": [
+                "Check internet connection",
+                "Close bandwidth-heavy applications",
+                "Clear browser cache",
+                "Try different browser",
+                "Contact support"
+            ],
+            "common_solutions": {
+                "disconnection": "Ensure stable internet connection",
+                "lag": "Close other applications",
+                "timeout": "Refresh and try again"
+            }
+        }
+    }
+}

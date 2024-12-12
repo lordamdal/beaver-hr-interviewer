@@ -1,0 +1,39 @@
+<!-- app/templates/email/interview_report.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Your Interview Report is Ready!</h2>
+
+<p>Hello {{ user_name }},</p>
+
+<p>Your practice interview with {{ company_name }} has been completed and analyzed. Here's a summary of your performance:</p>
+
+<div class="info-box">
+    <h3>Interview Summary</h3>
+    <ul>
+        <li>Overall Score: <span class="highlight">{{ overall_score }}%</span></li>
+        <li>Date: {{ interview_date }}</li>
+        <li>Duration: {{ duration }} minutes</li>
+    </ul>
+</div>
+
+<h3>Key Highlights</h3>
+<ul>
+    {% for strength in feedback.strengths %}
+    <li>{{ strength }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Areas for Improvement</h3>
+<ul>
+    {% for improvement in feedback.improvements %}
+    <li>{{ improvement }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ report_url }}" class="button">View Full Report</a>
+
+<p>Keep practicing to improve your interview skills!</p>
+
+<p>Best regards,<br>The {{ company_name }} Team</p>
+{% endblock %}

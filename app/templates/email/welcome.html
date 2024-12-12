@@ -1,0 +1,27 @@
+<!-- app/templates/email/welcome.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome to {{ company_name }}!</h2>
+
+<p>Hello {{ user_name }},</p>
+
+<p>Thank you for joining Beaver Job Interview Trainer! We're excited to help you prepare for your next job interview.</p>
+
+<div class="info-box">
+    <h3>Getting Started</h3>
+    <ul>
+        <li>Upload your resume</li>
+        <li>Set your interview preferences</li>
+        <li>Schedule your first practice interview</li>
+    </ul>
+</div>
+
+<p>Ready to start practicing?</p>
+
+<a href="{{ login_url }}" class="button">Start Your First Interview</a>
+
+<p>If you need any help, check out our <a href="{{ help_url }}">help center</a> or contact our support team.</p>
+
+<p>Best regards,<br>The {{ company_name }} Team</p>
+{% endblock %}

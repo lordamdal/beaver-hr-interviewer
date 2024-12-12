@@ -209,7 +209,9 @@ app/
         ├── base.html
         ├── welcome.html
 
-📜 API Documentation
+## 📜 API Documentation
+```plaintext
+
 Twilio Integration
 Webhook URL: /api/twilio/webhook
 Status Callbacks: /api/twilio/status
@@ -218,24 +220,26 @@ Stripe Integration
 Webhook URL: /api/stripe/webhook
 Success URL: /subscription/success
 Cancel URL: /subscription/cancel
-❓ Troubleshooting
+
+##❓ Troubleshooting
 Common Issues
 Database Connection:
-bash
-Copy code
+```bash
 python scripts/test_db_connection.py
+```
 Audio Issues:
 Check microphone permissions.
 Verify audio device settings.
 Test with:
-bash
-Copy code
+```bash
 python scripts/test_audio.py
+```
 API Integration:
 Verify API keys in the admin panel.
 Check webhook configurations.
 Monitor logs in logs/app.log.
-🤝 Contributing
+
+##🤝 Contributing
 Fork the repository.
 Create a feature branch.
 Commit changes.

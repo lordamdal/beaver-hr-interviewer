@@ -208,7 +208,7 @@ app/
     └── email/
         ├── base.html
         ├── welcome.html
-
+```
 ## 📜 API Documentation
 ```plaintext
 
@@ -220,6 +220,7 @@ Stripe Integration
 Webhook URL: /api/stripe/webhook
 Success URL: /subscription/success
 Cancel URL: /subscription/cancel
+```
 
 ##❓ Troubleshooting
 Common Issues
@@ -245,8 +246,8 @@ Create a feature branch.
 Commit changes.
 Push to the branch.
 Create a Pull Request.
-🛡️ License
+##🛡️ License
 MIT License.
 
-📧 Support
+##📧 Support
 For support, email support@beaverinterviews.com or create an issue in the repository.

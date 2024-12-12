@@ -222,26 +222,31 @@ Success URL: /subscription/success
 Cancel URL: /subscription/cancel
 ```
 
-##❓ Troubleshooting
+## ❓ Troubleshooting
+```plaintext
 Common Issues
+```
 Database Connection:
 ```bash
 python scripts/test_db_connection.py
 ```
 Audio Issues:
+```plaintext
 Check microphone permissions.
 Verify audio device settings.
+```
 Test with:
 ```bash
 python scripts/test_audio.py
 ```
+
+## API Integration:
 ```plaintext
-API Integration:
 Verify API keys in the admin panel.
 Check webhook configurations.
 Monitor logs in logs/app.log.
 ```
-##🤝 Contributing
+## 🤝 Contributing
 ```plaintext
 Fork the repository.
 Create a feature branch.
@@ -249,12 +254,12 @@ Commit changes.
 Push to the branch.
 Create a Pull Request.
 ```
-##🛡️ License
+## 🛡️ License
 ```plaintext
 MIT License.
 ```
 
-##📧 Support
+## 📧 Support
 ```plaintext
 For support, email support@beaverhand.ai or create an issue in the repository.
 ```

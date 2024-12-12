@@ -235,19 +235,26 @@ Test with:
 ```bash
 python scripts/test_audio.py
 ```
+```plaintext
 API Integration:
 Verify API keys in the admin panel.
 Check webhook configurations.
 Monitor logs in logs/app.log.
-
+```
 ##🤝 Contributing
+```plaintext
 Fork the repository.
 Create a feature branch.
 Commit changes.
 Push to the branch.
 Create a Pull Request.
+```
 ##🛡️ License
+```plaintext
 MIT License.
+```
 
 ##📧 Support
-For support, email support@beaverinterviews.com or create an issue in the repository.
+```plaintext
+For support, email support@beaverhand.ai or create an issue in the repository.
+```
